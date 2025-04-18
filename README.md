@@ -13,7 +13,7 @@ The goal of this assignment is to create a graphical interface in which a user c
 
 ## Flowgraph Description
 
-### 🔷 1. GUI Inputs (Controls)
+### 1. GUI Inputs (Controls)
 
 Three QT GUI Range blocks are used to give the user interactive sliders:
 
@@ -27,7 +27,7 @@ These variables are called `amplitude`, `frequency`, and `phase` respectively.
 
 ---
 
-### 🔷 2. Signal Generation
+### 2. Signal Generation
 
 A **Signal Source block** is used to generate a cosine wave, configured like this:
 
@@ -44,7 +44,7 @@ which represents a rotating phasor in the complex plane.
 
 ---
 
-### 🔷 3. Throttle Block
+### 3. Throttle Block
 
 A **Throttle block** is inserted between the Signal Source and the visualization sinks to ensure the flowgraph runs at real-time speed, avoiding CPU overload during simulation.
 
@@ -53,15 +53,15 @@ A **Throttle block** is inserted between the Signal Source and the visualization
 
 ---
 
-### 🔷 4. Output Visualization
+### 4. Output Visualization
 
 Two sinks are used:
 
-#### 🟦 QT GUI Time Sink
+#### QT GUI Time Sink
 - Displays the real/imaginary parts over time.
 - Helps observe how the waveform changes with each slider.
 
-#### 🟩 QT GUI Vector Sink (or XY Plot)
+#### QT GUI Vector Sink (or XY Plot)
 - Plots the signal in the complex plane (phasor representation).
 - You can see the vector rotate as frequency or phase changes, and stretch/shrink as amplitude changes.
 
